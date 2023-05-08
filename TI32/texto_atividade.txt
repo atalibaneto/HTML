@@ -1,0 +1,10 @@
+Bem-vindo à minha página! Aqui você vai encontrar muita informação útil sobre o assunto X.
+
+Não perca a oportunidade de aportunidade de aprender mais sobre esse tema fascinante!
+
+Para começar, aqui está uma lista de recursos recomendados:
+Este título foi escrito com a tag h4 e a fonte foi importada pela api do Google Fontes com arquivo local.
+Esta figura foi dimencionada para 10% de sua largura.
+
+    Google Fonts
+    Font Squirrel

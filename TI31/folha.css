@@ -1,0 +1,27 @@
+body {
+    background: #f2f2f2;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 50%;
+}
+.box:first-child {
+    border-right: none;
+}
+@font-face {
+    font-family: "Dancing Script";
+    src: url(fontes/DancingScript-Bold.ttf);
+}
+.font_dacing {
+    font-family: "Dancing Script";
+    font-size: 36px;
+}
