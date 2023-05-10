@@ -55,8 +55,8 @@ label {
     margin-top: 6px;
 }
 .linha::after {
-    content: "";
-    display: table;
+    content: ":";
+    display: table-row;
     clear: both;
 }
 /*a:link
