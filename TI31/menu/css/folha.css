@@ -13,12 +13,12 @@ li {
 li a {
     color: #fff;
     text-decoration: none;
-    display: inline-block;
+    display: inline;
     padding: 14px 16px;
     background-color: #9c9c9c;
 }
 li a:hover {
-    display: inline-block;
+    display: inline;
     background-color: #c31717;
 }
 h2 {
@@ -34,7 +34,7 @@ input[type=text], [type=email], textarea {
 }
 label {
     padding: 12px 12px 12px 0;
-    display: inline-block;
+    display: inline;
 }
 .container {
     width: 500px;
