@@ -1,0 +1,33 @@
+:root {
+    --vermelho: #ff0000;
+    --azul: #0077ff;
+    --verde: #44ff00;
+    --roxo: #462C9C;
+    --branco: #fff;
+}
+.caixa_azul {
+    background: var(--azul);
+}
+.caixa_vermelha {
+    background: var(--vermelho);
+}
+.caixa_verde {
+    background: var(--verde);
+}
+.caixa_roxa {
+    background: var(--roxo);
+}
+.espaco {
+    padding: 20px;
+    margin: 5px;
+}
+.borda {
+    border: 1px solid #000;
+    border-radius: 6px;
+}
+.texto_branco {
+    color: var(--branco);
+}
+.alinhamento_texto {
+    text-align: center;
+}
