@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/7c4f254726.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- página inicial -->
     <div id="header">
         <div class="container">
             <nav>
@@ -27,5 +28,62 @@
             </div>
         </div>
     </div>
+    <!-- Sobre -->
+    <div id="sobre">
+        <div class="container">
+            <div class="linha">
+                <div class="sobre-col-1">
+                    <img src="imagens/sobre.png">
+                </div>
+                <div class="sobre-col-2">
+                    <h1 class="sub-titulo">Sobre</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptas natus inventore id quisquam accusamus molestiae recusandae amet. Quaerat ad minus voluptatibus eveniet provident nulla. Aliquid recusandae dolorum neque itaque.</p>
+                    <div class="tab-titulo">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('exp')">Experiência</p>
+                        <p class="tab-links" onclick="opentab('formacao')">Formação</p>
+                    </div>
+                    <div class="tab-conteudos active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Desenvolvimento de Interfaces Web/APP</li>
+                            <li><span>Web Development</span><br>Desenvolvimento de Sites</li>
+                            <li><span>APP Development</span><br>Desenvolvimento de Apps para Android e iOS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-conteudos" id="exp">
+                        <ul>
+                            <li><span>2021 - Até hoje</span><br>Professor Honorário no MIT</li>
+                            <li><span>2011 - 2021</span><br>CIO at IBM</li>
+                            <li><span>2004 - 2011</span><br>Desenvolvedor na Google Inc.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-conteudos" id="formacao">
+                        <ul>
+                            <li><span>2010</span><br>MBA no MIT</li>
+                            <li><span>2009</span><br>MBA em Harvard</li>
+                            <li><span>2003</span><br>Serviço Nacional de Aprendizagem Comercial (Senac) - Botucatu / SP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        var abaLinks = document.getElementsByClassName("tab-links");
+        var abaConteudos = document.getElementsByClassName("tab-conteudos");
+            function opentab(abaNome) {
+                for (abaLink of abaLinks) {
+                    abaLink.classList.remove("active-link");
+                }
+                for (abaConteudo of abaConteudos) {
+                    abaConteudo.classList.remove("active-tab");
+                }
+                // Adiciona a classe active-link ao link da aba que foi clicada e torna visível o conteudo.
+                event.currentTarget.classList.add("active-link");
+                // Pega o conteudo da aba que corresponde ao nome retornado na função abaNome, depois adiciona a classe active-tab e torna o conteudo visivel.
+                document.getElementById(abaNome).classList.add("active-tab");
+            }
+    </script>
 </body>
 </html>
