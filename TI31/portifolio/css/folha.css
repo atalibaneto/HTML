@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --bg-color: #080808;
+    --fonte-color: #fff;
+    --fonte2-color: #ababab;
+    --vermelho-color: #ff004f;
+    --vermelho-escuro-color: #b54769;
+    --cinza-escur-br-color: #262626;
+}
+body {
+    background: var(--bg-color);
+    color: var(--fonte-color);
+}
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imagens/john_doe.png);
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    padding: 10px 10%;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo {
+    width: 140px;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: var(--fonte-color);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--vermelho-color);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span {
+    color: var(--vermelho-color);
+}
+/* ------- sobre ------- */
+#sobre {
+    padding: 20px;
+    color: var(--fonte2-color);
+}
+.linha {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.sobre-col-1 {
+    flex-basis: 35%;
+}
+.sobre-col-1 img {
+    width: 100%;
+    border-radius: 10px;
+}
+.sobre-col-2 {
+    flex-basis: 60%;
+}
+.sub-titulo {
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--fonte-color);
+}
+.tab-titulo {
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--vermelho-color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after {
+    width: 50%;
+}
+.tab-conteudos ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-conteudos ul li span {
+    color: var(--vermelho-escuro-color);
+    font-size: 14px;
+}
+.tab-conteudos {
+    display: none;
+}
+.tab-conteudos.active-tab {
+    display: block;
+}
