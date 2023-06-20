@@ -171,3 +171,80 @@ nav ul li a:hover::after {
     transform: translateY(-10px);
 }
 /* ------- portfolio ------- */
+#portfolio {
+    padding: 50px 0;
+}
+.lista-trabalho {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.trabalho {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.trabalho img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.trabalho:hover img {
+    transform: scale(1.1);
+}
+.camada {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), var(--vermelho-color));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.trabalho:hover .camada {
+    height: 100%;
+}
+.camada h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.camada p {
+    width: 80%;
+}
+.camada a {
+    margin-top: 20px;
+    color: var(--vermelho-color);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: var(--fonte-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid var(--vermelho-color);
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--fonte-color);
+    transition: background 0.5s;
+}
+.btn:hover {
+    background: var(--vermelho-color);
+}
