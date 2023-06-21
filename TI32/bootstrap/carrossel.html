@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/folha.css">
+</head>
+<body>
+    <header>
+        <div id="banner1" class="carousel slide" data-ride="carousel">
+            <ol>
+                <li data-target="#banner1" data-slide-to="0" class="active"></li>
+                <li data-target="#banner1" data-slide-to="1"></li>
+                <li data-target="#banner1" data-slide-to="2"></li>
+            </ol>
+        </div>
+        <!-- imagens carrossel -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="imagens/profissao1.jpg">
+            </div>
+            <div class="item">
+                <img src="imagens/profissao2.jpg">
+            </div>
+            <div class="item">
+                <img src="imagens/profissao3.jpg">
+            </div>
+        </div>
+        <!-- botões avançar e retornar -->
+        <a class="left carousel-control" href="#banner1" role="button" data-slide="prev">
+            <!-- span << espaço reservado -->
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#banner1" role="button" data-slide="next">
+            <!-- span >> espaço reservado -->
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            
+        </a>
+    </header>
+    <!-- scripts js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.7.0.min.js"></script>
+</body>
+</html>
