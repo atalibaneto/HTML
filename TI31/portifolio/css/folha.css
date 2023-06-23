@@ -3,6 +3,9 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --bg-color: #080808;
     --fonte-color: #fff;
@@ -247,4 +250,74 @@ nav ul li a:hover::after {
 }
 .btn:hover {
     background: var(--vermelho-color);
+}
+/* ------- contato ------- */
+.esq-contato {
+    flex-basis: 35%;
+}
+.dir-contato {
+    flex-basis: 65%;
+}
+.esq-contato p {
+    margin-top: 30px;
+}
+.esq-contato p i {
+    color: var(--vermelho-color);
+    margin-right: 15px;
+    font-size: 25px;
+}
+.redes_sociais {
+    margin-top: 30px;
+}
+.redes_sociais a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: var(--fonte2-color);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.redes_sociais a:hover {
+    color: var(--vermelho-color);
+    transform: translateY(-5px);
+}
+.btn.btn2 {
+    display: inline-block;
+    background: var(--vermelho-color);
+}
+.dir-contato form {
+    width: 100%;
+}
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: var(--cinza-escur-br-color);
+    padding: 15px;
+    margin: 15px 0;
+    color: var(--fonte-color);
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: var(--cinza-escur-br-color);
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i {
+    color: var(--vermelho-color);
+}
+#msg {
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
 }

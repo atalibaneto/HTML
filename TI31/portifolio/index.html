@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/folha.css">
     <title>TFL</title>
 </head>
+
 <body>
     <!-- página inicial -->
     <div id="header">
@@ -14,11 +16,11 @@
             <nav>
                 <img src="imagens/logo.png" class="logo">
                 <ul id="sidemenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Portfólio</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
             <div class="header-text">
@@ -36,7 +38,9 @@
                 </div>
                 <div class="sobre-col-2">
                     <h1 class="sub-titulo">Sobre</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aspernatur quod ipsum exercitationem. Eos explicabo nihil cumque harum mollitia inventore iste quaerat! Quod quas ipsum iure natus modi reprehenderit recusandae.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aspernatur quod ipsum exercitationem.
+                        Eos explicabo nihil cumque harum mollitia inventore iste quaerat! Quod quas ipsum iure natus
+                        modi reprehenderit recusandae.</p>
                     <div class="tab-titulo">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('exp')">Experiência</p>
@@ -75,19 +79,25 @@
                 <div>
                     <i class="fa-brands fa-codepen"></i>
                     <h2>UI/UX</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium autem sunt quod nemo enim numquam expedita eius, perferendis exercitationem est doloremque? Saepe animi nesciunt ipsa. Beatae pariatur nam ab reiciendis.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium autem sunt quod nemo enim
+                        numquam expedita eius, perferendis exercitationem est doloremque? Saepe animi nesciunt ipsa.
+                        Beatae pariatur nam ab reiciendis.</p>
                     <a href="#">Saiba mais</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Development</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta nulla unde a aliquam excepturi numquam facere, sapiente repudiandae voluptate expedita ipsam officia neque alias obcaecati laborum nihil nisi incidunt?</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta nulla unde a aliquam
+                        excepturi numquam facere, sapiente repudiandae voluptate expedita ipsam officia neque alias
+                        obcaecati laborum nihil nisi incidunt?</p>
                     <a href="#">Saiba mais</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-layer-group"></i>
                     <h2>App Development</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, molestias. Ipsum illo doloribus totam laudantium vero? Deserunt dolore necessitatibus magnam id. Quaerat consectetur repellat deserunt fugit mollitia dolore quae aut?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, molestias. Ipsum illo doloribus
+                        totam laudantium vero? Deserunt dolore necessitatibus magnam id. Quaerat consectetur repellat
+                        deserunt fugit mollitia dolore quae aut?</p>
                     <a href="#">Saiba mais</a>
                 </div>
             </div>
@@ -143,12 +153,13 @@
                     <a href="misc/cv_john.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="dir-contato">
-                    <form name="">
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Nome" placeholder="Digite seu nome" required>
                         <input type="email" name="email" placeholder="Digite seu e-mail" required>
                         <textarea name="Mensagem" rows="6" placeholder="Deixe sua mensagem"></textarea>
                         <button type="submit" class="btn btn2">Enviar</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -159,18 +170,36 @@
     <script>
         var abaLinks = document.getElementsByClassName("tab-links");
         var abaConteudos = document.getElementsByClassName("tab-conteudos");
-            function opentab(abaNome) {
-                for (abaLink of abaLinks) {
-                    abaLink.classList.remove("active-link");
-                }
-                for (abaConteudo of abaConteudos) {
-                    abaConteudo.classList.remove("active-tab");
-                }
-                // Adiciona a classe active-link ao link da aba que foi clicada e torna visível o conteudo.
-                event.currentTarget.classList.add("active-link");
-                // Pega o conteudo da aba que corresponde ao nome retornado na função abaNome, depois adiciona a classe active-tab e torna o conteudo visivel.
-                document.getElementById(abaNome).classList.add("active-tab");
+        function opentab(abaNome) {
+            for (abaLink of abaLinks) {
+                abaLink.classList.remove("active-link");
             }
+            for (abaConteudo of abaConteudos) {
+                abaConteudo.classList.remove("active-tab");
+            }
+            // Adiciona a classe active-link ao link da aba que foi clicada e torna visível o conteudo.
+            event.currentTarget.classList.add("active-link");
+            // Pega o conteudo da aba que corresponde ao nome retornado na função abaNome, depois adiciona a classe active-tab e torna o conteudo visivel.
+            document.getElementById(abaNome).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxbzFlurt4ojqgn9w_Fg9FortyJSuBqA4AtTcpweTH6ESR4cH-BTjpcTAR2cQTqLBkz/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Mensagem enviada com sucesso!"
+                    setTimeout(function() {
+                        msg.innerHTML = ""
+                    },1000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
 </body>
+
 </html>
