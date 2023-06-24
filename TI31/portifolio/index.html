@@ -21,7 +21,9 @@
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#contato">Contato</a></li>
+                    <i class="fa-solid fa-xmark" onclick="fechamenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="abremenu()"></i>
             </nav>
             <div class="header-text">
                 <p>UI/UX Designer</p>
@@ -199,6 +201,16 @@
                 })
                 .catch(error => console.error('Error!', error.message))
         })
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function abremenu() {
+            sidemenu.style.right = "0";
+        }
+        function fechamenu() {
+            sidemenu.style.right = "-200px";
+        }
     </script>
 </body>
 
